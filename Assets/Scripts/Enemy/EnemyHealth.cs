@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -71,7 +72,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void StartSinking ()
     {
-        GetComponent <UnityEngine.AI.NavMeshAgent> ().enabled = false;
+        GetComponent <NavMeshAgent> ().enabled = false;
         GetComponent <Rigidbody> ().isKinematic = true;
         isSinking = true;
         ScoreManager.score += scoreValue;
